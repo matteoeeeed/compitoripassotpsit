@@ -1,0 +1,155 @@
+<html>
+<style> 
+.div1{
+background-color: green;
+width: 100px;
+height: 100px;
+border: solid black 5px;
+position: relative;
+}
+
+.div2{
+background-color: green;
+width: 100px;
+height: 100px;
+border: solid black 5px;
+left: 112px;
+top: -110;
+position: relative;
+}
+
+.div3{
+background-color: green;
+width: 100px;
+height: 100px;
+border: solid black 5px;
+left: 225px;
+top: -220;
+position: relative;
+}
+
+.div4{
+background-color: green;
+width: 100px;
+height: 100px;
+border: solid black 5px;
+left: 339px;
+top: -330;
+position: relative;
+}
+
+.div5{
+background-color: green;
+width: 100px;
+height: 100px;
+border: solid black 5px;
+left: 453px;
+top: -440;
+position: relative;
+}
+
+
+</style>
+<div id="divg5"class="div1"></div>
+<div id="divg4"class="div2"></div>
+<div id="divg3"class="div3"></div>
+<div  id="divg2" class="div4"></div>
+<div id="divg" class="div5"></div>
+
+<script>
+let x=true;
+let sped=1;
+let px=510;
+let time=1;
+let divf = document.getElementById("divg");
+let cont=0;
+//2
+let x2=true;
+let sped2=1;
+let px2=410;
+let divf2 = document.getElementById("divg2");
+let cont2=0;
+//3
+let x3=true;
+let sped3=1;
+let px3=310;
+let divf3 = document.getElementById("divg3");
+let cont3=0;
+//4
+let x4=true;
+let sped4=1;
+let px4=210;
+let divf4 = document.getElementById("divg4");
+let cont4=0;
+//5
+let x5=true;
+let sped5=1;
+let px5=100;
+let divf5 = document.getElementById("divg5");
+let cont5=0;
+function movef(){
+// cubo
+if(x){
+px = px + sped;
+divf.style.left = px + 'px';
+cont+=1;
+}
+if(cont==500){
+x=false;
+}
+
+// 2 cubo
+
+if(cont==500){
+if(x2){
+px2 = px2 + sped2;
+divf2.style.left = px2 + 'px';
+cont2+=1;
+}
+if(cont2==488){
+x2=false;
+}
+}
+
+// 3 cubo
+
+if(cont2==488){
+if(x3){
+px3 = px3 + sped3;
+divf3.style.left = px3 + 'px';
+cont3+=1;
+}
+if(cont3==476){
+x3=false;
+}
+}
+
+// 4 cubo
+
+if(cont3==476){
+if(x4){
+px4 = px4 + sped4;
+divf4.style.left = px4 + 'px';
+cont4+=1;
+}
+if(cont4==465){
+x4=false;
+}
+}
+
+// 5 cubo
+
+if(cont4==465){
+if(x5){
+px5 = px5 + sped5;
+divf5.style.left = px5 + 'px';
+cont5+=1;
+}
+if(cont5==460){
+x5=false;
+}
+}
+}
+setInterval(movef,time);
+</script>
+</html>
